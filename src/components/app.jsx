@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import flats from '../../data/flats.js';
 
 import Card from './card.jsx';
+import Map from './map.jsx'
 
 class App extends Component {
   constructor (props) {
@@ -24,6 +25,7 @@ class App extends Component {
         </div>
 
         <div className="map-container">
+          <Map flats={ this.state.flats } />
         </div>
       </div>
     );
