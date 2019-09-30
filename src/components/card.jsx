@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class Card extends Component {
   handleclick = (e) =>{
     if(this.props.selectflat) {
-      this.props.selectflat(this.props.id)
+      console.log('true')
+      // this.props.selectflat.selectflat(this.props.id)
     }
     // this.props.selectflat(this.props.id)
     console.log("selected",this.props)

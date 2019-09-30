@@ -11,7 +11,6 @@ class App extends Component {
       flats: flats,
       selectedflat: 1,
     };
-
   }
 
   selectFlat = (id) => {
@@ -24,7 +23,7 @@ class App extends Component {
     return (
       <div>
         <div className="flat-list">
-          <Cardlist flats={this.state.flats} selectFlat={this.selectFlat} selectedFlat={this.state.selectedFlat} />
+          <Cardlist info={this.state} selectFlat={this.selectFlat} />
         </div>
 
         <div className="map-container">
