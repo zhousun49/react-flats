@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import flats from '../../data/flats.js';
 
-import Card from './card.jsx';
+import Cardlist from './cardlist.jsx';
 import Map from './map.jsx'
 
 class App extends Component {
@@ -9,23 +9,26 @@ class App extends Component {
     super(props);
     this.state = {
       flats: flats,
-      selectedflat: 0,
+      selectedflat: 1,
     };
+
   }
 
   selectFlat = (id) => {
     this.setState({selectedflat: id});
+    // const { i } = this.props;
+    // console.log({i})
   }
 
   render(){
     return (
       <div>
         <div className="flat-list">
-          <Card flats={ this.state.flats } />
+          <Cardlist flats={this.state.flats} selectFlat={this.selectFlat} selectedFlat={this.state.selectedFlat} />
         </div>
 
         <div className="map-container">
-          <Map flats={ this.state.flats } />
+          <Map flats={this.state.flats} selectedFlat={ this.props.selectedFlat} />
         </div>
       </div>
     );
